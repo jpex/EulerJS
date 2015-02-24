@@ -1,0 +1,57 @@
+/**
+ * Global Box-sizing
+**/
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+
+/**
+ * Global Elements
+**/
+
+html, body {
+  color: white;
+  background-color: darken($background, 4%);
+  font-family: 'Courier New', Consolas, Liberation Mono, monospace; /* Available in 400 or 500 font-weight only */
+  @include selection(white, #f92672);
+  font-size: 1.125rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover { text-decoration: none; }
+}
+
+.wrapper {
+  padding: $gr2;
+}
+
+.header {
+  @include selection(darken($background, 8%), $brand-secondary);
+  background-color: darken($background, 4%);
+  font-size: 16px;
+  font-weight: 600;
+  padding: $gr1 $gr2;
+}
+
+.logo-js {
+  background-color: #E6DB74;
+  color: darken($background, 8%);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px;
+}
+
+nav {
+  float: right;
+  a { color: #9a9580; 
+    &:hover { color: white; }
+  }
+}
+
+.answer { 
+  @include selection(darken($background, 8%), $brand-secondary); 
+  font-weight: 600;
+}

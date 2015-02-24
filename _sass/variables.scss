@@ -1,0 +1,78 @@
+$gr1 : 15px;
+$gr2 : 25px;
+$gr3 : 40px;
+$gr4 : 65px;
+$gr5 : 104px;
+
+/**
+ * General color: 
+**/
+
+$background:      #23241f;
+$brand-secondary: #E6DB74;
+
+/*
+  Selection
+*/
+
+@mixin selection($color, $background) {
+
+    ::-moz-selection {
+        color: $color;
+        background: $background;
+    }
+
+    ::selection {
+        color: $color;
+        background: $background;
+    }
+
+}
+
+/*
+ Letter-spacing
+*/
+
+$ls-strd: 0.04em;
+
+/*
+ Line-height
+*/
+
+$lh-sm: 1.2;
+$lh-strd: 1.5;
+$lh-lg: 1.8181;
+
+/*
+ Transition
+*/
+
+@mixin cubic-timing() {
+  -webkit-transition-timing-function: cubic-bezier(0.535, 0.000, 0.340, 0.995);
+  transition-timing-function: cubic-bezier(0.535, 0.000, 0.340, 0.995); 
+}
+
+@mixin standard-transition() {
+  transition: 0.4s all;
+  @include cubic-timing();
+}
+
+/**
+ * General Media Queries
+**/
+
+$sm-screen: "(max-width: 479px)";
+$md-screen: "(min-width: 480px)";
+$lg-screen: "(min-width: 1170px)";
+
+$md-to-lg-screen: "(min-width: 480px) and (max-width: 1169px)";
+
+/**
+ * Responsive Media Query IDs
+ *
+ * Media queries that are specific to a certain area.
+ *  Refactor variable names if complexity increases.
+**/
+
+$mq-header: "(min-width: 535px)";
+$mq-footer: "(min-width: 595px)";

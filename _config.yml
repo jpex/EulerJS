@@ -1,0 +1,11 @@
+# Site settings
+title:       Project Euler Works
+description: "Attempted answers to project euler problems in JavaScript"
+baseurl:     ""
+
+defaults:
+  -
+    values:
+      layout: "default"
+
+permalink: /:title/
